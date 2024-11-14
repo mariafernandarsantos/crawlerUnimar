@@ -44,10 +44,6 @@
 <br>:warning: [Módulo requests]
 <br>:warning: [Módulo bs4]
 <br>:warning: [Módulo pandas]
-<br>:warning: [Módulo os]
-<br>:warning: [Módulo datetime]
-<br>:warning: [Módulo time]
-
 ...
 
 ## Como rodar a aplicação :arrow_forward:

@@ -3,12 +3,24 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import os
 import datetime
+import time
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0'
 }
 
-def extrair_texto(link, pasta_destino):
+# Inputs feitos pelo usuário
+codigo_produto = '01'
+country = ['Brazil', 'Portugal']
+
+tempo_inicio = time.time()
+
+# Função para definir o link dinamicamente
+def obter_url_produto(codigo_produto):
+    return f'https://www.trademap.org/Country_SelProductCountry.aspx?nvpm=1%7c076%7c%7c%7c%7c{codigo_produto}%7c%7c%7c2%7c1%7c1%7c1%7c1%7c1%7c2%7c1%7c1%7c1'
+
+# Função principal que extrairá os dados
+def extrair_texto(link, pasta_destino, codigo_produto, country):
     response = requests.get(link, headers=headers)
     if response.status_code == 200:
         content = response.content
@@ -16,7 +28,6 @@ def extrair_texto(link, pasta_destino):
 
         # Lista para armazenar os dados
         dados = []
-        selecao = ["Brazil"]
         data_hora_atual = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
         elementos = site.find_all('tr', {'align': 'right'})
         for elemento in elementos:
@@ -35,7 +46,7 @@ def extrair_texto(link, pasta_destino):
                 participacao_exportacoes = colunas[11].get_text().strip()
                 ranking_mundial = colunas[12].get_text().strip()
 
-                if exporters in selecao:
+                if exporters in country:
                     # Adiciona os dados na lista
                     dados.append([
                         exporters, valor_2023, participacao_2023, quantidade_2023,
@@ -43,7 +54,6 @@ def extrair_texto(link, pasta_destino):
                         balanca_comercial, crescimento_exportacoes, participacao_importacoes,
                         participacao_exportacoes, ranking_mundial
                     ])
-
 
         # Cria um DataFrame com os dados
         df = pd.DataFrame(dados, columns=[
@@ -55,7 +65,7 @@ def extrair_texto(link, pasta_destino):
         ])
 
         # Cria o caminho completo do arquivo CSV
-        nome_arquivo = f'dados_comercio_{data_hora_atual}.csv'
+        nome_arquivo = f'dados_comercio_{codigo_produto}_{data_hora_atual}.csv'
         caminho_arquivo = os.path.join(pasta_destino, nome_arquivo)
 
         # Exporta para o arquivo CSV no caminho especificado
@@ -63,10 +73,14 @@ def extrair_texto(link, pasta_destino):
         print(f"Dados exportados com sucesso para '{caminho_arquivo}'")
 
 # URL do site
-url = 'https://www.trademap.org/Country_SelProductCountry.aspx?nvpm=1%7c076%7c%7c%7c%7c01%7c%7c%7c2%7c1%7c1%7c1%7c1%7c%7c2%7c1%7c1%7c1'
+url = obter_url_produto(codigo_produto)
 
 # Caminho da pasta onde o arquivo será salvo
-pasta_destino = r'D:\Faculdade'
+pasta_destino = r'C:\Users\muril\OneDrive\Desktop\trabalho paulinho'
 
 # Extrai o texto e salva o arquivo CSV na pasta especificada
-extrair_texto(url, pasta_destino)
+extrair_texto(url, pasta_destino, codigo_produto, country)
+
+tempo_fim = time.time()
+tempo_execucao = tempo_fim - tempo_inicio
+print(f"Tempo de execução: {tempo_execucao:.2f} segundos")
