@@ -82,9 +82,8 @@ e também para países específicos.
 :memo: Realizar o login apenas uma vez para que o usuário tenha livre acesso.
 
 ## Desenvolvedores/Contribuintes :octocat:
-
-<br><sub>Guilherme Yuji Tanaka</sub></br> 
-<br><sub>Murilo Gonçalves Rocha Santana</sub></br>
-<br><sub>Maria Fernanda Rodrigues Santos</sub></br>
-<br><sub>João Victor Guimarães Martins Tozato</sub></br>
-<br><sub>Pedro Henrique Arroio Quiqueto Franco</sub></br>
+<br>Guilherme Yuji Tanaka</br> 
+<br>Murilo Gonçalves Rocha Santana</br>
+<br>Maria Fernanda Rodrigues Santos</br>
+<br>João Victor Guimarães Martins Tozato</br>
+<br>Pedro Henrique Arroio Quiqueto Franco</br>
