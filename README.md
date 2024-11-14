@@ -51,10 +51,10 @@
 No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator
+git clone https://github.com/mariafernandarsantos/crawlerUnimar.git
 ```
 
-Execute os comandos no terminal para instalar os pacotes bs4
+Execute os comandos no terminal para instalar os pacotes bs4, requests e pandas
 
 ```
 pip install bs4
