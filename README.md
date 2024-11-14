@@ -5,7 +5,7 @@
   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
 </p>
 
-> Status do Projeto: :heavy_check_mark: :warning: (em desenvolvimento)
+> Status do Projeto: :warning: (em desenvolvimento)
 
 ### Tópicos 
 
@@ -18,8 +18,6 @@
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
 ... 
-
-Insira os tópicos do README em links para facilitar a navegação do leitor
 
 ## Descrição do projeto 
 
@@ -43,16 +41,14 @@ Insira os tópicos do README em links para facilitar a navegação do leitor
 ## Pré-requisitos
 
 :warning: [Python](https://www.python.org/downloads/)
-:warning: [Módulo requests]
-:warning: [Módulo bs4]
-:warning: [Módulo pandas]
-:warning: [Módulo os]
-:warning: [Módulo datetime]
-:warning: [Módulo time]
+<br>:warning: [Módulo requests]
+<br>:warning: [Módulo bs4]
+<br>:warning: [Módulo pandas]
+<br>:warning: [Módulo os]
+<br>:warning: [Módulo datetime]
+<br>:warning: [Módulo time]
 
 ...
-
-Liste todas as dependencias e libs que o usuário deve ter instalado na máquina antes de rodar a aplicação 
 
 ## Como rodar a aplicação :arrow_forward:
 
@@ -71,7 +67,6 @@ pip install requests
 
 ```
 Depois, apenas rodar o código pela IDE utilizada.  
-
 ... 
 
 
@@ -88,9 +83,8 @@ e também para países específicos.
 
 ## Desenvolvedores/Contribuintes :octocat:
 
-Liste o time responsável pelo desenvolvimento do projeto
-
-| [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Guilherme Yuji Tanaka</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Murilo Gonçalves Rocha Santana</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Maria Fernanda Rodrigues Santos</sub>](https://github.com/Diana-ops) | [<img 
-src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>João Victor Guimarães Martins Tozato</sub>](https://github.com/Diana-ops) |  [<img 
-src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Pedro Henrique Arroio Quiqueto Franco</sub>](https://github.com/Diana-ops) |
-| :---: | :---: | :---: 
+<br><sub>Guilherme Yuji Tanaka</sub></br> 
+<br><sub>Murilo Gonçalves Rocha Santana</sub></br>
+<br><sub>Maria Fernanda Rodrigues Santos</sub></br>
+<br><sub>João Victor Guimarães Martins Tozato</sub></br>
+<br><sub>Pedro Henrique Arroio Quiqueto Franco</sub></br>
